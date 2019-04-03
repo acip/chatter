@@ -16,7 +16,7 @@ class Discussion extends Model
 
     public function user()
     {
-        return $this->belongsTo(config('chatter.user.namespace'));
+        return $this->belongsTo(config('chatter.user.namespace'), 'user_id', 'user_id');
     }
 
     public function category()
